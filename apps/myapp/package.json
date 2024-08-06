@@ -1,0 +1,8 @@
+{
+  "name": "myapp",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@nx27081/mylib": "workspace:*"
+  }
+}

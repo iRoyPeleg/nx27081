@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/myapp",
@@ -21,6 +21,7 @@
             "input": "apps/myapp/public"
           }
         ],
+        "buildLibsFromSource": false,
         "styles": ["apps/myapp/src/styles.css"],
         "scripts": []
       },
@@ -52,7 +53,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nx/angular:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "myapp:build:production"
